@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Video Call</title>
+    <link href="css/home.css" rel="stylesheet">
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/jquery-3.4.1.slim.min.js"
@@ -14,7 +15,7 @@
 <div class="topbar">
     <img src="images/logo.png" alt="">
 </div>
-<nav class="navbar navbar-expand-sm  navbar-dark" style="background-color:#181446">
+<nav class="navbar navbar-expand-sm  navbar-dark sticky-top" style="background-color:#181446">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -80,7 +81,11 @@
     </div>
 
 </div>
-</div>
+
+<footer id="footer">
+    <p>Developed bij X-Systems.</p>
+</footer>
+
 <script>
     var videoHeight = 100; // default video width;
     var container_div = document.getElementById('row'); // will be used later to count the number of columns in a row
