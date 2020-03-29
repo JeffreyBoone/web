@@ -1,217 +1,286 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
-<!-- All the files that are required -->
+    <meta charset="UTF-8">
+    <title>xecure.app</title>
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/register.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 </head>
-<body>
-<!-- Where all the magic happens -->
 
-<div class="topbar">
-    <img src="images/logo.png" alt="">
-</div>
-<!-- REGISTRATION FORM -->
-<div class="MAINCONTAINER" style="padding:20px 0">
-    <div class="logo">Register</div>
-    <!-- Main Form -->
-    <div class="login-form-1">
-        <form id="register-form" class="text-left">
-            <div class="login-form-main-message"></div>
-            <div class="main-login-form">
-                <div class="login-group">
-                    <div class="form-group">
-                        <label for="reg_username" class="sr-only">New Username</label>
-                        <input type="text" class="form-control" id="reg_username" name="reg_username"
-                               placeholder="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg_password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="reg_password" name="reg_password"
-                               placeholder="new password">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                        <input type="password" class="form-control" id="reg_password_confirm"
-                               name="reg_password_confirm" placeholder="confirm password">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="reg_email" class="sr-only">Your Email</label>
-                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg_email" class="sr-only">Confirm Email</label>
-                        <input type="text" class="form-control" id="reg_email_confirm" name="reg_email" placeholder="confirm email">
-                    </div>
-                    <div class="form-group">
-                        <label for="reg_fullname" class="sr-only">Full Name</label>
-                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname"
-                               placeholder="full name">
-                    </div>
-
-
-
-
-                </div>
-                <button type="button" class="login-button" onclick="location.href='index.html'"><i class="fa fa-chevron-right"></i></button>
-            </div>
-            <div class="etc-login-form">
-                <p>already have an account? <a href="login.html">login here</a></p>
-            </div>
-        </form>
+<header>
+    <div class="jumbotron jumbotron-fluid topbar" style="background: orange">
+        <div class="topbar">
+            <img alt="" src="images/logo.png">
+        </div>
     </div>
-    <!-- end:Main Form -->
-</div>
-<script src="js/jquery-3.4.1.slim.min.js"></script>
+</header>
 
-</body>
-<script>
-    (function ($) {
-        "use strict";
+<nav class="navbar navbar-expand-sm  navbar-dark" style="background-color:#181446">
+    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target=".navbar-toggle" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+            <a class="nav-item active nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
+                    Chat messaging
+                </a>
 
-        // Options for Message
-        //----------------------------------------------
-        var options = {
-            'btn-loading': '<i class="fa fa-spinner fa-pulse"></i>',
-            'btn-success': '<i class="fa fa-check"></i>',
-            'btn-error': '<i class="fa fa-remove"></i>',
-            'msg-success': 'All Good! Redirecting...',
-            'msg-error': 'Wrong login credentials!',
-            'useAJAX': true,
-        };
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
+                    <a class="dropdown-item" href="chatscreen-private.html">1 on 1</a>
+                    <a class="dropdown-item" href="#">Group</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
+                    Voice calling
+                </a>
 
-        // Login Form
-        //----------------------------------------------
-        // Validation
-        $("#login-form").validate({
-            rules: {
-                lg_username: "required",
-                lg_password: "required",
-            },
-            errorClass: "form-invalid"
-        });
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
+                    <a class="dropdown-item" href="voicecall.html">1 on 1</a>
+                    <a class="dropdown-item" href="#">Group</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
+                    Video calling
+                </a>
 
-        // Form Submission
-        $("#login-form").submit(function () {
-            remove_loading($(this));
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
+                    <a class="dropdown-item"  href="videocallscreen-private.html">1 on 1</a>
+                    <a class="dropdown-item" href="videocallscreen.html">Group</a>
+                </div>
+            </div>
+            <a class="nav-item nav-link" href="#">Manual</a>
+            <a class="nav-item nav-link" href="#">FAQ</a>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse navbar-toggle d-flex justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav d-flex">
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="register.html">Register</a>
+            <a class="nav-item nav-link" href="login.html">Login</a>
+        </div>
+    </div>
+</nav>
 
-            if (options['useAJAX'] == true) {
-                // Dummy AJAX request (Replace this with your AJAX code)
-                // If you don't want to use AJAX, remove this
-                dummy_submit_form($(this));
+<div id="wrap">
+    <body>
+    <div class="maincontainer" style="padding:20px 0">
+        <div class="logo">Register</div>
+        <!-- Main Form -->
+        <div class="login-form-1">
+            <form id="register-form" class="text-left">
+                <div class="login-form-main-message"></div>
+                <div class="main-login-form">
+                    <div class="login-group">
+                        <div class="form-group">
+                            <label for="reg_username" class="sr-only">New Username</label>
+                            <input type="text" class="form-control" id="reg_username" name="reg_username"
+                                   placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_password" class="sr-only">Password</label>
+                            <input type="password" class="form-control" id="reg_password" name="reg_password"
+                                   placeholder="new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+                            <input type="password" class="form-control" id="reg_password_confirm"
+                                   name="reg_password_confirm" placeholder="confirm password">
+                        </div>
 
-                // Cancel the normal submission.
-                // If you don't want to use AJAX, remove this
-                return false;
+                        <div class="form-group">
+                            <label for="reg_email" class="sr-only">Your Email</label>
+                            <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_email" class="sr-only">Confirm Email</label>
+                            <input type="text" class="form-control" id="reg_email_confirm" name="reg_email" placeholder="confirm email">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_fullname" class="sr-only">Full Name</label>
+                            <input type="text" class="form-control" id="reg_fullname" name="reg_fullname"
+                                   placeholder="full name">
+                        </div>
+
+
+
+
+                    </div>
+                    <button type="button" class="login-button" onclick="location.href='index.html'"><i class="fa fa-chevron-right"></i></button>
+                </div>
+                <div class="etc-login-form">
+                    <p>already have an account? <a href="login.html">login here</a></p>
+                </div>
+            </form>
+        </div>
+        <!-- end:Main Form -->
+    </div>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+
+    </body>
+    <script>
+        (function ($) {
+            "use strict";
+
+            // Options for Message
+            //----------------------------------------------
+            var options = {
+                'btn-loading': '<i class="fa fa-spinner fa-pulse"></i>',
+                'btn-success': '<i class="fa fa-check"></i>',
+                'btn-error': '<i class="fa fa-remove"></i>',
+                'msg-success': 'All Good! Redirecting...',
+                'msg-error': 'Wrong login credentials!',
+                'useAJAX': true,
+            };
+
+            // Login Form
+            //----------------------------------------------
+            // Validation
+            $("#login-form").validate({
+                rules: {
+                    lg_username: "required",
+                    lg_password: "required",
+                },
+                errorClass: "form-invalid"
+            });
+
+            // Form Submission
+            $("#login-form").submit(function () {
+                remove_loading($(this));
+
+                if (options['useAJAX'] == true) {
+                    // Dummy AJAX request (Replace this with your AJAX code)
+                    // If you don't want to use AJAX, remove this
+                    dummy_submit_form($(this));
+
+                    // Cancel the normal submission.
+                    // If you don't want to use AJAX, remove this
+                    return false;
+                }
+            });
+
+            // Register Form
+            //----------------------------------------------
+            // Validation
+            $("#register-form").validate({
+                rules: {
+                    reg_username: "required",
+                    reg_password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    reg_password_confirm: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#register-form [name=reg_password]"
+                    },
+                    reg_email: {
+                        required: true,
+                        email: true
+                    },
+                    reg_agree: "required",
+                },
+                errorClass: "form-invalid",
+                errorPlacement: function (label, element) {
+                    if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
+                        element.parent().append(label); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
+                    } else {
+                        label.insertAfter(element); // standard behaviour
+                    }
+                }
+            });
+
+            // Form Submission
+            $("#register-form").submit(function () {
+                remove_loading($(this));
+
+                if (options['useAJAX'] == true) {
+                    // Dummy AJAX request (Replace this with your AJAX code)
+                    // If you don't want to use AJAX, remove this
+                    dummy_submit_form($(this));
+
+                    // Cancel the normal submission.
+                    // If you don't want to use AJAX, remove this
+                    return false;
+                }
+            });
+
+            // Forgot Password Form
+            //----------------------------------------------
+            // Validation
+            $("#forgot-password-form").validate({
+                rules: {
+                    fp_email: "required",
+                },
+                errorClass: "form-invalid"
+            });
+
+            // Form Submission
+            $("#forgot-password-form").submit(function () {
+                remove_loading($(this));
+
+                if (options['useAJAX'] == true) {
+                    // Dummy AJAX request (Replace this with your AJAX code)
+                    // If you don't want to use AJAX, remove this
+                    dummy_submit_form($(this));
+
+                    // Cancel the normal submission.
+                    // If you don't want to use AJAX, remove this
+                    return false;
+                }
+            });
+
+            // Loading
+            //----------------------------------------------
+            function remove_loading($form) {
+                $form.find('[type=submit]').removeClass('error success');
+                $form.find('.login-form-main-message').removeClass('show error success').html('');
             }
-        });
 
-        // Register Form
-        //----------------------------------------------
-        // Validation
-        $("#register-form").validate({
-            rules: {
-                reg_username: "required",
-                reg_password: {
-                    required: true,
-                    minlength: 5
-                },
-                reg_password_confirm: {
-                    required: true,
-                    minlength: 5,
-                    equalTo: "#register-form [name=reg_password]"
-                },
-                reg_email: {
-                    required: true,
-                    email: true
-                },
-                reg_agree: "required",
-            },
-            errorClass: "form-invalid",
-            errorPlacement: function (label, element) {
-                if (element.attr("type") === "checkbox" || element.attr("type") === "radio") {
-                    element.parent().append(label); // this would append the label after all your checkboxes/labels (so the error-label will be the last element in <div class="controls"> )
-                } else {
-                    label.insertAfter(element); // standard behaviour
+            function form_loading($form) {
+                $form.find('[type=submit]').addClass('clicked').html(options['btn-loading']);
+            }
+
+            function form_success($form) {
+                $form.find('[type=submit]').addClass('success').html(options['btn-success']);
+                $form.find('.login-form-main-message').addClass('show success').html(options['msg-success']);
+            }
+
+            function form_failed($form) {
+                $form.find('[type=submit]').addClass('error').html(options['btn-error']);
+                $form.find('.login-form-main-message').addClass('show error').html(options['msg-error']);
+            }
+
+            // Dummy Submit Form (Remove this)
+            //----------------------------------------------
+            // This is just a dummy form submission. You should use your AJAX function or remove this function if you are not using AJAX.
+            function dummy_submit_form($form) {
+                if ($form.valid()) {
+                    form_loading($form);
+
+                    setTimeout(function () {
+                        form_success($form);
+                    }, 2000);
                 }
             }
-        });
 
-        // Form Submission
-        $("#register-form").submit(function () {
-            remove_loading($(this));
+        })(jQuery);
+    </script>
+    </body>
+</div>
 
-            if (options['useAJAX'] == true) {
-                // Dummy AJAX request (Replace this with your AJAX code)
-                // If you don't want to use AJAX, remove this
-                dummy_submit_form($(this));
-
-                // Cancel the normal submission.
-                // If you don't want to use AJAX, remove this
-                return false;
-            }
-        });
-
-        // Forgot Password Form
-        //----------------------------------------------
-        // Validation
-        $("#forgot-password-form").validate({
-            rules: {
-                fp_email: "required",
-            },
-            errorClass: "form-invalid"
-        });
-
-        // Form Submission
-        $("#forgot-password-form").submit(function () {
-            remove_loading($(this));
-
-            if (options['useAJAX'] == true) {
-                // Dummy AJAX request (Replace this with your AJAX code)
-                // If you don't want to use AJAX, remove this
-                dummy_submit_form($(this));
-
-                // Cancel the normal submission.
-                // If you don't want to use AJAX, remove this
-                return false;
-            }
-        });
-
-        // Loading
-        //----------------------------------------------
-        function remove_loading($form) {
-            $form.find('[type=submit]').removeClass('error success');
-            $form.find('.login-form-main-message').removeClass('show error success').html('');
-        }
-
-        function form_loading($form) {
-            $form.find('[type=submit]').addClass('clicked').html(options['btn-loading']);
-        }
-
-        function form_success($form) {
-            $form.find('[type=submit]').addClass('success').html(options['btn-success']);
-            $form.find('.login-form-main-message').addClass('show success').html(options['msg-success']);
-        }
-
-        function form_failed($form) {
-            $form.find('[type=submit]').addClass('error').html(options['btn-error']);
-            $form.find('.login-form-main-message').addClass('show error').html(options['msg-error']);
-        }
-
-        // Dummy Submit Form (Remove this)
-        //----------------------------------------------
-        // This is just a dummy form submission. You should use your AJAX function or remove this function if you are not using AJAX.
-        function dummy_submit_form($form) {
-            if ($form.valid()) {
-                form_loading($form);
-
-                setTimeout(function () {
-                    form_success($form);
-                }, 2000);
-            }
-        }
-
-    })(jQuery);
-</script>
+<footer id="footer">
+    <p>Developed bij X-Systems.</p>
+</footer>
+</html>

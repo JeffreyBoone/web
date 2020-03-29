@@ -3,53 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <title>xecure.app</title>
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <script crossorigin="anonymous" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .testimg {
+            height: 250px;
+            background: darkgray;
+        }
+    </style>
 </head>
-<body>
-<div class="topbar">
-    <img src="images/logo.png" alt="">
-</div>
+
+<header>
+    <div class="jumbotron jumbotron-fluid topbar" style="background: orange">
+        <div class="topbar">
+            <img alt="" src="images/logo.png">
+        </div>
+    </div>
+</header>
 
 <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color:#181446">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-toggle"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target=".navbar-toggle" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse navbar-toggle" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-            <a class="nav-item active nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item active nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             <div class="dropdown">
-                <a class="nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
                     Chat messaging
                 </a>
 
-                <div class="dropdown-menu" style="background: orange" aria-labelledby="dropdownMenuLink">
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
                     <a class="dropdown-item" href="chatscreen-private.html">1 on 1</a>
                     <a class="dropdown-item" href="#">Group</a>
                 </div>
             </div>
             <div class="dropdown">
-                <a class="nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
                     Voice calling
                 </a>
 
-                <div class="dropdown-menu" style="background: orange" aria-labelledby="dropdownMenuLink">
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
                     <a class="dropdown-item" href="voicecall.html">1 on 1</a>
                     <a class="dropdown-item" href="#">Group</a>
                 </div>
             </div>
             <div class="dropdown">
-                <a class="nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="dropdownMenuLink" role="button">
                     Video calling
                 </a>
 
-                <div class="dropdown-menu" style="background: orange" aria-labelledby="dropdownMenuLink">
+                <div aria-labelledby="dropdownMenuLink" class="dropdown-menu" style="background: orange">
                     <a class="dropdown-item"  href="videocallscreen-private.html">1 on 1</a>
                     <a class="dropdown-item" href="videocallscreen.html">Group</a>
                 </div>
@@ -67,13 +76,13 @@
     </div>
 </nav>
 
-
-<div class="maincontainer">
-
-
-
+<div id="wrap">
+    <body>
+    <div class="maincontainer main"></div>
+    </body>
 </div>
-<!-- end:Main Form -->
 
-</body>
+<footer id="footer">
+    <p>Developed bij X-Systems.</p>
+</footer>
 </html>

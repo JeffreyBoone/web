@@ -1,7 +1,7 @@
 .topbar{
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: 150px;
     background: orange;
     align-items: center;
     align-content: center;
@@ -18,7 +18,6 @@ body {
 }
 .maincontainer{
     display: flex;
-    display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -26,12 +25,45 @@ body {
     background-color: #181446 !important;
 
 }
-.form-group{
-    background: #e7e7e7;
-    width:100%;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+
+#footer {
+    position: relative;
+    margin-top: -100px;
+    /* negative value of footer height */
+    height: 100px;
+    clear: both;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    background: orange;
+    align-items: center;
     align-content: center;
     justify-content: center;
-    align-items: center;
+}
+
+
+/* Opera Fix thanks to Maleika (Kohoutec) */
+
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px;
+    /* thank you Erik J - negate effect of float*/
 }
