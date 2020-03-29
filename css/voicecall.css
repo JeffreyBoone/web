@@ -35,3 +35,7 @@ body{
     flex-direction:row;
     justify-content: space-evenly;
 }
+.endcol{
+    display: flex;
+    justify-content: center;
+}

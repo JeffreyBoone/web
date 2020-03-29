@@ -37,9 +37,11 @@ html, body {
 .contacts-list{
     background: #181446;
     color:white;
+    margin: 2em 1em;
 }
 .own-info{
     background: orange;
+
 }
 .chat_box {
     position: relative;
@@ -54,10 +56,22 @@ html, body {
 .messagebox{
     position: absolute;
     bottom: 0;
+    display: flex;
 }
 .toolbar{
     background: orange;
+    display: flex;
+    justify-content: flex-end;
+
 }
 .toolbar button{
 
+}
+.messagefield{
+    width: 54vw;
+}
+.send-btn{
+
+    height: 7vh;
+    cursor: pointer;
 }
